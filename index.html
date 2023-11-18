@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(194, 103, 103);
+      }
+      .card_container {
+        width: 35vw;
+        height: 90vh;
+        background-color: rgb(12, 12, 12);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 25px;
+        position: relative;
+        overflow: hidden;
+        z-index: 5;
+      }
+      .card_container::after {
+        content: "";
+        width: 100%;
+        height: 70%;
+        bottom: 0px;
+        position: absolute;
+        background-color: pink;
+        z-index: -5;
+        border-bottom: 12px solid rgb(19, 18, 18);
+      }
+      .photo {
+        margin-top: 20px;
+        width: 50%;
+        aspect-ratio: 1/1;
+        background-image:url(priyanshuu.png);
+        background-size: cover;
+
+        border-radius: 50%;
+        border: 15px solid pink;
+        position: relative;
+      }
+      .photo::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        width: 10%;
+        aspect-ratio: 1/1;
+        border-radius: 60%;
+        background-color: green;
+        transform: translateX(-10px);
+      }
+      .name {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .detail {
+        padding: 50px;
+      }
+      .logo {
+        width: 70%;
+        height: 100px;
+        border-top: 1px solid black;
+        display: flex;
+      }
+      .logo_sub {
+        height: 100%;
+        flex: 1;
+
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .icon {
+        font-size: 2rem;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      @media only screen and (max-width: 600px) {
+        .card_container {
+          width: 90vw;
+          height: 80vh;
+        }
+        .photo {
+          width: 60%;
+          aspect-ratio: 1/1;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="main">
+      <div class="card_container">
+        <div class="photo"></div>
+        <div class="name">
+          <h1>Priyanshu Sharma</h1>
+          <h6>Software developer/Web developer</h6>
+        </div>
+        <div class="detail">
+          I priyanshu sharma student of SRMS CET&R. I am passionate about SDE/WD.
+        </div>
+        <div class="logo">
+          <div class="logo_sub">
+           
+              <i class="fa-brands fa-instagram icon"></i>
+          </div>
+          <div class="logo_sub">
+              <i class="fa-brands fa-github icon"></i
+            >
+          </div>
+          <div class="logo_sub">
+           
+              <i class="fa-brands fa-youtube icon"></i>
+           
+          </div>
+          <div class="logo_sub">
+           
+              <i class="fa-brands fa-linkedin-in icon"></i>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
